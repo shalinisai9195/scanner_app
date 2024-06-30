@@ -1,17 +1,38 @@
-<div>
-  <button (click)="toggleCamera()">Switch Camera</button>
-  <webcam
-    *ngIf="showWebcam"
-    [trigger]="triggerObservable"
-    [videoOptions]="videoOptions"
-    (imageCapture)="handleImage($event)"
-    (initError)="handleInitError($event)"
+<div class="main-body w-100 d-flex flex-column align-items-center">
+  <h3 class="bg-success w-100 text-center py-3 text-light">Document Scanner</h3>
+  <div class="d-flex position-relative w-75">
+    <button
+      class="btn position-absolute top-0 end-0 mb-5 p-3 text-light"
+      (click)="toggleCamera()"
+    >
+      <i class="fa-solid fa-rotate fa-2xl"></i>
+    </button>
+    <webcam
+      class="bg-secondary mb-2 rounded w-100"
+      *ngIf="showWebcam"
+      [trigger]="triggerObservable"
+      [videoOptions]="videoOptions"
+      (imageCapture)="handleImage($event)"
+      (initError)="handleInitError($event)"
+      style="width: 640px; height: 480px"
+    >
+    </webcam>
+    <button
+      class="btn text-light position-absolute bottom-0 start-50 translate-middle-x mb-5 border border-3 border-light p-3 rounded-circle"
+      (click)="captureImage()"
+    >
+      <i class="fa-solid fa-camera fa-xl"></i>
+    </button>
+  </div>
+  <div class="w-75">
+    <input type="file" (change)="onFileChange($event)" accept="image/*" />
+  </div>
+  <canvas  #canvas></canvas>
+  <button
+    class="btn btn-success my-3"
+    (click)="downloadImage()"
+    *ngIf="processedImage"
   >
-  </webcam>
-  <button (click)="captureImage()">Capture Image</button>
-  <input type="file" (change)="onFileChange($event)" accept="image/*" />
-  <canvas #canvas></canvas>
-  <button (click)="downloadImage()" *ngIf="processedImage">
-    Download Scanned Image
+    Download
   </button>
 </div>

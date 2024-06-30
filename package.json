@@ -23,6 +23,7 @@
     "@tensorflow/tfjs": "^4.20.0",
     "@zxing/library": "^0.21.1",
     "@zxing/ngx-scanner": "^18.0.0",
+    "bootstrap": "^5.3.3",
     "cropperjs": "^1.6.2",
     "jspdf": "^2.5.1",
     "ngx-image-cropper": "^8.0.0",

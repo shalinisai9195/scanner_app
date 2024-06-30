@@ -2,7 +2,9 @@ canvas {
     max-width: 100%;
     margin-top: 20px;
     border: 1px solid #ccc;
-    height: 420px;
-    width: 360px;
-    background-color: rgba(130, 128, 128, 0.311);
+    min-height: 420px;
+    background-color: rgba(128, 128, 128, 0.195);
+}
+.main-body{
+    overflow-x: hidden;
 }

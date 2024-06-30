@@ -1,37 +1,37 @@
 {
-  "hash": "5cfac46b",
+  "hash": "6eaed3fe",
   "configHash": "73b93e75",
-  "lockfileHash": "20e75155",
-  "browserHash": "3fc99d1d",
+  "lockfileHash": "9c094de8",
+  "browserHash": "8651d6f6",
   "optimized": {
     "@angular/common": {
       "src": "../../../../../node_modules/@angular/common/fesm2022/common.mjs",
       "file": "@angular_common.js",
-      "fileHash": "915b2b20",
+      "fileHash": "d239105b",
       "needsInterop": false
     },
     "@angular/core": {
       "src": "../../../../../node_modules/@angular/core/fesm2022/core.mjs",
       "file": "@angular_core.js",
-      "fileHash": "04987bb4",
+      "fileHash": "7346af3e",
       "needsInterop": false
     },
     "@angular/platform-browser": {
       "src": "../../../../../node_modules/@angular/platform-browser/fesm2022/platform-browser.mjs",
       "file": "@angular_platform-browser.js",
-      "fileHash": "858c7e05",
+      "fileHash": "6c7af348",
       "needsInterop": false
     },
     "ngx-webcam": {
       "src": "../../../../../node_modules/ngx-webcam/fesm2020/ngx-webcam.mjs",
       "file": "ngx-webcam.js",
-      "fileHash": "2de31f61",
+      "fileHash": "852aacbd",
       "needsInterop": false
     },
     "rxjs": {
       "src": "../../../../../node_modules/rxjs/dist/esm5/index.js",
       "file": "rxjs.js",
-      "fileHash": "8643d4f2",
+      "fileHash": "509427bd",
       "needsInterop": false
     }
   },
