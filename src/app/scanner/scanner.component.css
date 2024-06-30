@@ -1,0 +1,8 @@
+canvas {
+    max-width: 100%;
+    margin-top: 20px;
+    border: 1px solid #ccc;
+    height: 420px;
+    width: 360px;
+    background-color: rgba(130, 128, 128, 0.311);
+}

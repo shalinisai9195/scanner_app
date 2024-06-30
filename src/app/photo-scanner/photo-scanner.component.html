@@ -1,0 +1,16 @@
+<div class="scanner">
+  <input type="file" (change)="onFileChange($event)" accept="image/*" />
+  <canvas id="canvasOutput" style="display: none"></canvas>
+  <ngx-image-cropper
+    [imageChangedEvent]="imageChangedEvent"
+    [maintainAspectRatio]="false"
+    format="png"
+    (imageCropped)="imageCropped($event)"
+    [style.display]="croppedImage ? 'none' : 'block'"
+  ></ngx-image-cropper>
+
+  <div *ngIf="croppedImage" class="preview">
+    <img [src]="croppedImage" alt="Cropped Image" />
+    <button (click)="downloadImage()">Download</button>
+  </div>
+</div>

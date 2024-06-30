@@ -1,0 +1,10 @@
+<div class="scanner">
+  <video #videoElement autoplay></video>
+  <button (click)="captureImage()">Capture Document</button>
+
+  <div *ngIf="processedImage">
+    <h3>Processed Image</h3>
+    <img [src]="processedImage" alt="Processed Document" />
+    <button (click)="downloadImage()">Download Scanned Document</button>
+  </div>
+</div>

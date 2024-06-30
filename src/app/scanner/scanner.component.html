@@ -1,0 +1,17 @@
+<div>
+  <button (click)="toggleCamera()">Switch Camera</button>
+  <webcam
+    *ngIf="showWebcam"
+    [trigger]="triggerObservable"
+    [videoOptions]="videoOptions"
+    (imageCapture)="handleImage($event)"
+    (initError)="handleInitError($event)"
+  >
+  </webcam>
+  <button (click)="captureImage()">Capture Image</button>
+  <input type="file" (change)="onFileChange($event)" accept="image/*" />
+  <canvas #canvas></canvas>
+  <button (click)="downloadImage()" *ngIf="processedImage">
+    Download Scanned Image
+  </button>
+</div>
