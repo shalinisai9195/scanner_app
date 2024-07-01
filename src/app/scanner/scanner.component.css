@@ -1,10 +1,15 @@
-canvas {
+/* canvas {
     max-width: 100%;
     margin-top: 20px;
     border: 1px solid #ccc;
     min-height: 420px;
     background-color: rgba(128, 128, 128, 0.195);
-}
+} */
+canvas {
+    max-width: 100%;
+    margin-top: 20px;
+    border: 1px solid #ccc;
+  }
 .main-body{
     overflow-x: hidden;
 }
