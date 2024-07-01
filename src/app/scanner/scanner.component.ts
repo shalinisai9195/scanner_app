@@ -79,9 +79,15 @@ export class ScannerComponent {
 
     const rect = cv.boundingRect(maxContour);
     const cropped = src.roi(rect);
-    cv.imshow(context.canvas, cropped);
 
-    src.delete(); gray.delete(); contours.delete(); hierarchy.delete();
+    // Convert the cropped image to black and white
+    const bwImage = new cv.Mat();
+    cv.cvtColor(cropped, bwImage, cv.COLOR_RGBA2GRAY);
+    cv.threshold(bwImage, bwImage, 0, 255, cv.THRESH_BINARY | cv.THRESH_OTSU);
+
+    cv.imshow(context.canvas, bwImage);
+
+    src.delete(); gray.delete(); contours.delete(); hierarchy.delete(); bwImage.delete();
 
     this.processedImage = context.canvas.toDataURL('image/png');
   }
